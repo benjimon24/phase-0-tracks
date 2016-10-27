@@ -16,4 +16,4 @@ A commit is sort of like creating a save point in a video game. It creates a sna
 
 * What is a merge conflict?
 
-A merge conflict is when you try to merge two different branches that both have changes to the same part of your project. Git does not know which change should be used so it returns an error message instead. You have to manually resolve the conflcit before you can complete the merge.
+A merge conflict is when you try to merge two different branches that both have changes to the same part of your project. Git does not know which change should be used so it returns an error message instead. You have to manually resolve the conflict before you can complete the merge.
