@@ -13,3 +13,12 @@ margin-bottom: 3px;
 .accomplishments {
 font-size: .8em;
 }
+
+.accomplishments li:hover {
+	color: red;
+
+}
+
+section p {
+	color: red;
+}
