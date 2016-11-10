@@ -13,7 +13,8 @@ z-index: 2;
 #hat {
 position: absolute;
 top: 20px;
-z-index: 1;
+margin-left: -20px;
+z-index: 1
 }
 
 #octopus {
