@@ -1,0 +1,21 @@
+Release 0: Using the elevator
+- Start at the button on the bottom left
+- Does that button match the floor number you are trying to reach?
+	-If yes, press it
+-Otherwise, go right until you reach the next button
+-If there are no more buttons, move up to the next row of buttons and go back to the first button on the left
+-Does that button match the floor number you are trying to reach?
+	-If yes, press it
+
+Release 1: Brushing your Teeth
+- Clench your teeth
+- Take the toothbrush and stick it to the end of the left side of your mouth
+- Brush up and down as you slowly move across to the right side of your mouth
+- Unclench your teeth
+- Brush the inner bottom left side of your mouth
+- Brush the inner bottom right side of your mouth
+- Brush the inner top left side of your mouth
+- Brush the inner top right side of your mouth
+- Brush the roof of your mouth
+- Take a deep breath
+- Brush your tongue
