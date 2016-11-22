@@ -40,5 +40,21 @@ end
 # puts next_letter("f")
 # puts next_letter("s")
 
+# puts alias_maker("Felicia Torres")
 
-puts alias_maker("Felicia Torres")
+pseudonym_storage = {}
+
+loop do
+puts "What is your name? (Type 'quit' to exit) "
+input = gets.chomp
+	if input == "quit"
+		break
+	else
+		puts "Your alias is '#{alias_maker(input)}'"
+		pseudonym_storage[input] = alias_maker(input)
+	end
+end
+
+pseudonym_storage.each do |key, value|
+	puts "#{value} is actually #{key}."
+end
