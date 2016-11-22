@@ -36,13 +36,19 @@ def decrypt(string)
 	i = 0
 	new_string = ""
 	while i < string.length
-		if string[i] == "a"
-			previous_char = "z"
-		else
-			previous_char = ALPHABET[ALPHABET.index(string[i]) - 1]
-		end
+# 		if string[i] == "a"
+# 			previous_char = "z"
+# 		else
+# 			previous_char = ALPHABET[ALPHABET.index(string[i]) - 1]
+# 		end
 		
-		new_string += previous_char
+# 		new_string += previous_char
+		
+#We had an interesting interaction during the pairing session where we noticed our decrypt method was working even 
+#before we added code for what we thought might be an edge case. I went back and double checked and realized that our 
+#code already works out because of how negative indexes work. I have notified my partner of this and refactored that part to remove 
+#the redundancy. -Ben
+		new_string += ALPHABET[ALPHABET.index(string[i]) - 1]
 		i += 1
 	end
 
