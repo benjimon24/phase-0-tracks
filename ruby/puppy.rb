@@ -9,6 +9,6 @@
 #Snout : Thin, Medium-length
 
 #Behavior ---------------------
-#Loud
-#Territorial
-#Attention-seeking
+#Bark
+#Roll Over
+#High Five
