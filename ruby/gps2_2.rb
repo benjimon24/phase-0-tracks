@@ -11,20 +11,20 @@
 # Method to add an item to a list
 # input: hash, item name and optional quantity
 # steps: add item to hash
-# output: hash
+# output: prints a string, returns nil
 
 # Method to remove an item from the list
 # input: hash, item name
 # steps: compare item with hash keys
 #   # if we find it, delete it
 #   # else spit out error message - item not found
-# output: hash
+# output: prints a string, returns nil
 
 # Method to update the quantity of an item
 # input: hash, item name, quantity
 # steps: find item in hash, set value to new qty
 # if item doesnt exist, add the new item
-# output: hash
+# output: prints a string, returns nil
 
 # Method to print a list and make it look pretty
 # input: hash
@@ -44,39 +44,39 @@ def create_list(groceries_string)
 end
 
 def add_item(groceries_hash, item_name, qty=1)
-    groceries_hash[item_name] = qty
-    puts "\nHere is your updated grocery list with #{qty} (#{item_name}) added:"
-    print_list(groceries_hash)
+  groceries_hash[item_name] = qty
+  puts "\nHere is your updated grocery list with #{qty} (#{item_name}) added:"
+  print_list(groceries_hash)
 end
 
 def remove_item(groceries_hash, item_name)
-    if groceries_hash.include?(item_name)
-        groceries_hash.delete(item_name)
-    else
-        puts "\n******************"
-        puts "ERROR: (#{item_name}) is not in your grocery list."
-        puts "******************"
-    end
+  if groceries_hash.include?(item_name)
+    groceries_hash.delete(item_name)
     puts "\nHere is your updated grocery list with the (#{item_name}) removed:"
-    print_list(groceries_hash)
+  	print_list(groceries_hash)
+  else
+    puts "\n******************"
+    puts "ERROR: (#{item_name}) is not in your grocery list."
+    puts "******************"
+  end	
 end
 
 def update_quantity(groceries_hash, item_name, qty)
-    if groceries_hash.include?(item_name)
-	    groceries_hash[item_name] = qty
-	    puts "\nHere is a revision with the number of (#{item_name}) updated:"
-	    print_list(groceries_hash)
-	  else
-        puts "\n******************"
-        puts "ERROR: (#{item_name}) is not in your grocery list."
-        puts "******************"
-    end
+  if groceries_hash.include?(item_name)
+    groceries_hash[item_name] = qty
+    puts "\nHere is a revision with the number of (#{item_name}) updated:"
+    print_list(groceries_hash)
+  else
+    puts "\n******************"
+    puts "ERROR: (#{item_name}) is not in your grocery list."
+    puts "******************"
+  end
 end
 
 def print_list(groceries_hash)
     puts "\n==== Groceries List ======"
     groceries_hash.each do |item, qty|
-        puts "#{item} - Qty: #{qty}"
+      puts "#{item} - Qty: #{qty}"
     end
     puts "========================"
 end
