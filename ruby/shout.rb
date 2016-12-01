@@ -1,14 +1,40 @@
+# module Shout
+
+#   def self.yell_angrily(words)
+#     words + "!!!" + " :("
+#   end
+
+#   def self.yelling_happily(words)
+#   	words + "!!!" + " :D"
+#   end
+
+# end
+
+# puts Shout.yell_angrily("hey")
+# puts Shout.yelling_happily("yay")
+
 module Shout
 
-  def self.yell_angrily(words)
+  def yell_angrily(words)
     words + "!!!" + " :("
   end
 
-  def self.yelling_happily(words)
+  def yelling_happily(words)
   	words + "!!!" + " :D"
   end
 
 end
 
-puts Shout.yell_angrily("hey")
-puts Shout.yelling_happily("yay")
+class Dad
+	include Shout
+end
+
+class Teacher
+	include Shout
+end
+
+dad = Dad.new
+puts dad.yell_angrily("I can drink as much as I want")
+
+teacher = Teacher.new
+puts teacher.yelling_happily("The sky is the limit")
