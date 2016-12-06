@@ -82,8 +82,11 @@ def print_list(groceries_hash)
 end
 
 
-groceries = "Lemonade Tomatoes Onions Apples"
+groceries = "Lemonade Tomatoes Onions"
 groceries = create_list(groceries)
+add_item(groceries, "Ice Cream", 4)
+update_quantity(groceries, "Lemonade", 2)
+update_quantity(groceries, "Tomatoes", 3)
 add_item(groceries, "Cereal")
 add_item(groceries, "Bananas", 5)
 remove_item(groceries, "Lemonade")
