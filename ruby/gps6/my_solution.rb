@@ -80,3 +80,20 @@ STATE_DATA.each do |state, hash_info|
 end
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# One uses strings as a key. The other uses symbols, which has their own functionality. 
+
+# What does require_relative do? How is it different from require?
+# require_relative allows you to find the file in the directory relative to the file you are calling it from, instead of from Ruby's libraries. 
+
+# What are some ways to iterate through a hash?
+# You can use .each which uses both the key and value, each_key to iterate through just the keys, or each_value to iterate through just the values.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# All the variables were instance variables. The two methods in virus_effects didn't need to accept them as parameters because they are instance methods.
+
+# What concept did you most solidify in this challenge?
+# I now have a bunch better understanding of the relationship between instance variables and instance methods.
+# Specifically, I now have a better understanding of whether or not to accept them as parameters.
+# I also learned about using 'private' to make instance methods inaccessible from outside the method.
