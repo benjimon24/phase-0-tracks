@@ -1,0 +1,37 @@
+
+sqlite> select * from games;
+1|Super Smash Bros 4|98|false|1
+2|Final Fantasy XV|92|false|2
+3|Halo 5|90|false|3
+4|Splatoon|86|false|1
+5|Street Fighter V|80|false|2
+
+sqlite> select * from consoles;
+1|Wii-U|300|false
+2|Playstation 4|250|false
+3|Xbox One|250|true
+
+update games SET rating=67 where name="Street Fighter V";
+
+sqlite> select * from games, consoles where games.console_id = consoles.id;
+1|Super Smash Bros 4|98|false|1|1|Wii-U|300|false
+2|Final Fantasy XV|92|false|2|2|Playstation 4|250|false
+3|Halo 5|90|false|3|3|Xbox One|250|true
+4|Splatoon|86|false|1|1|Wii-U|300|false
+5|Street Fighter V|67|false|2|2|Playstation 4|250|false
+
+sqlite> select games.name, consoles.name from games JOIN consoles on games.conso
+le_id = consoles.id;
+Super Smash Bros 4|Wii-U
+Final Fantasy XV|Playstation 4
+Halo 5|Xbox One
+Splatoon|Wii-U
+Street Fighter V|Playstation 4
+
+sqlite> delete from games where rating<80;
+
+sqlite> select * from games;
+1|Super Smash Bros 4|98|false|1
+2|Final Fantasy XV|92|false|2
+3|Halo 5|90|false|3
+4|Splatoon|86|false|1
