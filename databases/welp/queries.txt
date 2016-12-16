@@ -1,0 +1,12 @@
+ SELECT * FROM reviews JOIN users ON reviews.user_id=users.id JOIN businesses ON reviews.business_id=businesses.id;
+1|4|was great|2|3|3|Denzel|George|2|Sushi World
+2|2|not so good|1|1|1|Bradford|Pitt|1|Grundy Hollow Wedding Chapel
+3|5|excellent|3|3|3|Denzel|George|3|Lotus Yoga
+
+ SELECT users.First_name, users.Last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users ON reviews.user_id=users.id JOIN businesses ON reviews.business_id=businesses.id;
+ Denzel|George|Sushi World|4|was great
+Bradford|Pitt|Grundy Hollow Wedding Chapel|2|not so good
+Denzel|George|Lotus Yoga|5|excellent
+
+SELECT users.First_name, users.Last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users ON reviews.user_id=users.id JOIN businesses ON reviews.business_id=businesses.id WHERE businesses.id=2;
+Denzel|George|Sushi World|4|was great
