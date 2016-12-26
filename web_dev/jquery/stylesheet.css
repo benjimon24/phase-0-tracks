@@ -1,0 +1,14 @@
+html {
+	width: 900px;
+	margin: auto;
+	background-color: #333333;
+}
+
+div {
+/*    height: 50px;*/
+    width: 20%;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+}
